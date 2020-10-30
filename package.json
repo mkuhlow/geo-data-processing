@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/mkuhlow/geoDataProzessingService/issues"
   },
-  "homepage": "https://github.com/mkuhlow/geoDataProzessingService#readme"
+  "homepage": "https://github.com/mkuhlow/geoDataProzessingService#readme",
+  "dependencies": {
+    "geolib": "^3.3.1",
+    "mocha": "^8.2.0"
+  }
 }
