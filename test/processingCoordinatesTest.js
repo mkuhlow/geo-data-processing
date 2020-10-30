@@ -86,20 +86,13 @@ const simpleCoordinates = [
 
 getSimpleCoordinates = function(numberOfElements) {
     var coordinates = [];
-    var defaultCoordinate = {
-        id: "",
-        x: "",
-        y: ""
-    }
+
     for(var i = 0; i<=numberOfElements; i++){
         var defaultCoordinate = {
             id: i,
             x: "52." + i * 255,
             y : "10." + i * 255
         }
-        defaultCoordinate.id = i;
-        defaultCoordinate.x = "52." + i * 255;
-        defaultCoordinate.y = "10." + i * 255
         coordinates.push(defaultCoordinate);
     }
 
@@ -119,7 +112,6 @@ describe('test processing Coordinates', function () {
     it('should get many Entries', function () {
         var coordinate = { "latitude": "52.2735300", "longitude": "10.5076500" };
         const randomCoordinates = getSimpleCoordinates(43);
-        console.log(randomCoordinates);
         output = pC.processingCoordinates(testJSONDaten, coordinate, '3000');
         var testoutput = { "carID": "3", "x": "123", "y": "34322" };
         expect(output, testoutput);
